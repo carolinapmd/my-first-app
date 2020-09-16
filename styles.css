@@ -1,0 +1,230 @@
+.first-color {
+  color: #e4f9f5;
+}
+.second-color {
+  color: #30e3ca;
+}
+.third-color {
+  color: #11999e;
+}
+.fourth-color {
+  color: #40514e;
+}
+.primary-text-color {
+  color: #212121;
+}
+.secondary-text-color {
+  color: #757575;
+}
+.divider-color {
+  color: #bdbdbd;
+}
+.icon-color {
+  color: #000000;
+}
+
+body {
+  margin-top: 20px;
+}
+
+#fahrenheit-link {
+  color: #757575;
+}
+
+#ceslius-link {
+  color: #11999e;
+}
+
+.container {
+  max-width: 780px;
+  min-width: 780px;
+}
+
+.card {
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  padding-bottom: 30px;
+}
+
+.date,
+.hour {
+  display: inline;
+}
+.header p strong {
+  font-size: 18px;
+  padding-left: 15px;
+}
+.date {
+  padding: 0 15px 0 0;
+  color: #11999e;
+}
+
+.hour {
+  font-size: 20px;
+  color: #757575;
+  position: relative;
+  left: 360px;
+}
+
+.search {
+  margin: 0 auto;
+  display: block;
+}
+.search-engine button {
+  position: relative;
+  top: -50px;
+  left: 304px;
+  margin: 5px;
+  color: #757575;
+}
+.search-engine {
+  max-width: 300px;
+  margin: 0 auto;
+}
+.search-engine label {
+  color: #11999e;
+  margin-bottom: 0;
+}
+
+.try {
+  display: block;
+  margin: 0 auto;
+}
+.fa-search-location,
+.fa-compass {
+  font-size: larger;
+  color: #757575;
+}
+.form-control,
+.mb-2 {
+  font-size: 15px;
+}
+
+.chosen-city {
+  margin-top: 30px;
+}
+
+.chosen-city .location,
+.temperature {
+  text-align: right;
+  padding: 0;
+}
+
+.location,
+.temperature {
+  font-family: "Yantramanav", sans-serif;
+  line-height: 1;
+  color: #11999e;
+}
+.city {
+  font-size: 40px;
+  font-weight: 900;
+}
+.country {
+  font-size: 25px;
+}
+.temperature {
+  text-align: center;
+}
+.temperature-value {
+  font-weight: 900;
+  font-size: 80px;
+  padding-left: 10px;
+}
+.celsius {
+  color: #11999e;
+  font-weight: 500;
+  font-size: 25px;
+  position: relative;
+  top: -37px;
+}
+.change-units {
+  color: #757575;
+  font-size: 14px;
+  position: relative;
+  top: -28px;
+  left: 82px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.maxMinTemp {
+  color: #11999e;
+  position: relative;
+  left: 128px;
+  top: -34px;
+  font-size: 20px;
+}
+
+.unit {
+  font-size: 12px;
+}
+
+.weather-today,
+.five-day-weather {
+  padding: 0 40px;
+  color: #40514e;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.five-day-weather {
+  padding: 0 40px;
+}
+.today-in-city,
+.forecast {
+  text-align: left;
+}
+
+.fa-temperature-low,
+.fa-tint,
+.fa-wind {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  font-size: 80px;
+  opacity: 0.1;
+}
+
+.parameter,
+.parameter-value,
+.parameter-unit,
+.five-day-weather .card {
+  font-family: "Yantramanav", sans-serif;
+}
+
+.parameter-value {
+  font-size: 45px;
+}
+
+.weatherDescription {
+  font-size: 22px;
+}
+
+.five-day-weather .card {
+  background-image: linear-gradient(to top, #cfd9df7d 0%, #e2ebf07f 100%);
+  box-shadow: 4px 4px 4px rgba(148, 148, 148, 0.1);
+  color: #11999e;
+}
+
+.temperature-day {
+  font-size: 20px;
+}
+
+.month-day {
+  font-size: 20px;
+}
+
+.fa-cloud-sun,
+.fa-sun {
+  position: relative;
+  top: -22px;
+
+  font-size: 40px;
+}
+
+button {
+  box-shadow: 4px 4px 4px rgba(148, 148, 148, 0.1);
+}
