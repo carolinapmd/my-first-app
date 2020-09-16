@@ -228,3 +228,7 @@ body {
 button {
   box-shadow: 4px 4px 4px rgba(148, 148, 148, 0.1);
 }
+
+p .openSource {
+  font-size: small;
+}
