@@ -1,11 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@400;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://kit.fontawesome.com/e231b123f3.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    
+    <div class="container">
+        <div class="card" style="width: 100%">
+            <div class="card-body">
+                <div class="header">
+                    <p class="date">
+                        <i class="fas fa-bars"></i>
+                        <strong>
+                            <span id="date"> 18th</span>
+                        </strong>
+                        <small>
+                            <span id="month-year-day">August 2020, Saturday</span>
+                        </small>
+                    </p>
+                    <p class="hour" id="hour">17:25</p>
+                    </p>
+                </div>
+
+                <div class="search">
+                    <div class="search-engine">
+                        <form id="city-form">
+                            <label for="enter-city">Check the weather in...</label>
+                            <input type="text" class="form-control mb-2" placeholder="Enter city here"
+                                id="enter-city" />
+                            <button type="submit" class="btn btn-light">
+                                <i class="fas fa-search-location"></i></button>
+                            <button type="button" class="btn btn-light" id="reload">
+                                <i class="far fa-compass"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="chosen-city">
+                    <div class="row">
+                        <div class="col-3">
+                            <hr />
+                        </div>
+                        <div class="col-3 location">
+                            <span class="city" id="city"></span>
+                            <br />
+                            <span class="country" id="country"></span>
+                        </div>
+                        <div class="col-3 temperature">
+                            <span class="temperature-value" id="temperature"></span>
+                            <span class="celsius">
+                                <a href="#" id="ceslius-link">ºC</a>
+                            </span>
+                            <br />
+                            <div class="maxMinTemp"> max: <strong><span id="max-temp">35</span></strong><span
+                                    class="unit">ºC</span> | </span>
+                                min: <strong><span id="min-temp">35</span></strong><span class="unit">ºC</span></div>
+
+                            <span class="change-units">
+                                <a href="#" id="fahrenheit-link">change to ºF</a>
+                            </span>
+                        </div>
+                        <div class="col-3">
+                            <hr />
+                        </div>
+                    </div>
+                </div>
+                <div class="weather-today">
+                    <p class="today-in-city">
+                        Today in <strong><span id="today-in">Lisbon</span></strong>
+                    </p>
+
+                    <div class="row">
+                        <div class="col">
+                            <p class="parameter">Looks like:</p>
+                            <br />
+                            <span class="weatherDescription" id="weather-description">7</span>
+
+                            <br />
+                        </div>
+                        <div class="col">
+                            <p class="parameter">Feels like:</p>
+                            <br />
+                            <span class="parameter-value" id="feels-like">35</span>
+                            <span class="parameter-unit">ºC</span>
+                            <br />
+                            <i class="fas fa-temperature-low"></i>
+                        </div>
+                        <div class="col">
+                            <p class="parameter">Humidity:</p>
+                            <br />
+                            <span class="parameter-value" id="humidity">5</span>
+                            <span class="parameter-unit">%</span>
+                            <br />
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <div class="col">
+                            <p class="parameter">Wind:</p>
+                            <br />
+                            <span class="parameter-value" id="wind">7</span>
+                            <span class="parameter-unit">km/h</span>
+                            <br />
+                            <i class="fas fa-wind"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+                <div class="five-day-weather">
+                    <p class="forecast">
+                        5 day weather forecast in <strong>Lisbon:</strong>
+                    </p>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="temperature-day">35ºC</p>
+                                    <br /><i class="fas fa-sun"></i><br />
+                                    <span class="week-day">sun,</span>
+                                    <span class="month-day">9th</span>
+                                </div>
+                                <div class="col">
+                                    <p class="temperature-day">36ºC</p>
+                                    <br /><i class="fas fa-cloud-sun"></i><br />
+                                    <span class="week-day">mon,</span>
+                                    <span class="month-day">10th</span>
+                                </div>
+                                <div class="col">
+                                    <p class="temperature-day">35ºC</p>
+                                    <br /><i class="fas fa-cloud-sun"></i><br />
+                                    <span class="week-day">tue,</span>
+                                    <span class="month-day">11th</span>
+                                </div>
+                                <div class="col">
+                                    <p class="temperature-day">38ºC</p>
+                                    <br /><i class="far fa-sun"></i><br />
+                                    <span class="week-day">wed,</span>
+                                    <span class="month-day">12th</span>
+                                </div>
+                                <div class="col">
+                                    <p class="temperature-day">37ºC</p>
+                                    <br /><i class="far fa-sun"></i><br />
+                                    <span class="week-day">thu,</span>
+                                    <span class="month-day">13th</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="src/script.js"></script>
 </body>
+
 </html>
