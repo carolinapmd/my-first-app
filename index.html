@@ -39,7 +39,7 @@
                                 id="enter-city" />
                             <button type="submit" class="btn btn-light">
                                 <i class="fas fa-search-location"></i></button>
-                            <button type="button" class="btn btn-light" id="reload">
+                            <button type="button" class="btn btn-light" id="here">
                                 <i class="far fa-compass"></i>
                             </button>
                         </form>
@@ -76,7 +76,7 @@
                     </div>
                 </div>
                 <div class="weather-today">
-                    <p class="today-in-city">
+                    <p class="subtitle">
                         Today in <strong><span id="today-in"></span></strong>
                     </p>
 
@@ -115,42 +115,13 @@
 
                 <hr />
                 <div class="five-day-weather">
-                    <p class="forecast">
+                    <p class="subtitle">
                         5 day weather forecast in <strong><span id="city-forecast"></span></strong>
                     </p>
                     <div class="card">
                         <div class="card-body">
-                            <div class="row">
-                                <div class="col">
-                                    <p class="temperature-day">35ºC</p>
-                                    <br /><i class="fas fa-sun"></i><br />
-                                    <span class="week-day">sun,</span>
-                                    <span class="month-day">9th</span>
-                                </div>
-                                <div class="col">
-                                    <p class="temperature-day">36ºC</p>
-                                    <br /><i class="fas fa-cloud-sun"></i><br />
-                                    <span class="week-day">mon,</span>
-                                    <span class="month-day">10th</span>
-                                </div>
-                                <div class="col">
-                                    <p class="temperature-day">35ºC</p>
-                                    <br /><i class="fas fa-cloud-sun"></i><br />
-                                    <span class="week-day">tue,</span>
-                                    <span class="month-day">11th</span>
-                                </div>
-                                <div class="col">
-                                    <p class="temperature-day">38ºC</p>
-                                    <br /><i class="far fa-sun"></i><br />
-                                    <span class="week-day">wed,</span>
-                                    <span class="month-day">12th</span>
-                                </div>
-                                <div class="col">
-                                    <p class="temperature-day">37ºC</p>
-                                    <br /><i class="far fa-sun"></i><br />
-                                    <span class="week-day">thu,</span>
-                                    <span class="month-day">13th</span>
-                                </div>
+                            <div class="row" id="forecast">
+                            
                             </div>
                         </div>
                     </div>

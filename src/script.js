@@ -53,11 +53,20 @@ function updateCurrentDate(update) {
       return `${dateNumber}rd`;
     } else {
       if (dateNumber === 2 || dateNumber === 22) {
+        return `${dateNumber}nd`;
       } else {
         return `${dateNumber}th`;
       }
     }
   }
+}
+
+function forecastDate(timestamp) {
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  let currentDay = days[timestamp.getDay()];
+  return `${currentDay},</span>
+    <span class="month-day">${updateCurrentDate(timestamp)}`;
 }
 
 function showDefault(city) {
@@ -115,12 +124,36 @@ function displayWeather(response) {
   let lat = response.data.coord.lat;
   let lon = response.data.coord.lon;
   let apiUrlOneCall = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-  console.log(lon);
   axios.get(apiUrlOneCall).then(displayForecast);
 }
 
 function displayForecast(response) {
   console.log(response);
+
+  let forecast = null;
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = null;
+
+  for (let index = 0; index < 5; index++) {
+    forecast = response.data.daily[index];
+
+    let forecastElement = document.querySelector("#forecast");
+    forecastElement.innerHTML += `
+    
+    <div class="col">
+      <p class="temperature-day"><strong>${Math.round(
+        forecast.temp.max
+      )}º </strong><span>${Math.round(forecast.temp.min)}º</span></p>
+     <img src="http://openweathermap.org/img/wn/${
+       forecast.weather[0].icon
+     }@2x.png" alt="" class="dayWeatherIcon">
+      <div><span class="week-day">${forecastDate(
+        new Date(forecast.dt * 1000)
+      )}</span></div>
+    </div>
+  
+    `;
+  }
 }
 
 function retrievePosition(position) {
@@ -148,7 +181,7 @@ dateUpdate.innerHTML = updateCurrentDate(now);
 let insertCity = document.querySelector("#city-form");
 insertCity.addEventListener("submit", searchCity);
 
-let reloadButton = document.querySelector("#reload");
-reloadButton.addEventListener("click", getCurrentLocation);
+let hereButton = document.querySelector("#here");
+hereButton.addEventListener("click", getCurrentLocation);
 
 showDefault("London");

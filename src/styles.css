@@ -174,8 +174,7 @@ body {
 .five-day-weather {
   padding: 0 40px;
 }
-.today-in-city,
-.forecast {
+.subtitle {
   text-align: left;
 }
 
@@ -226,11 +225,12 @@ p:first-letter {
 }
 
 .temperature-day {
-  font-size: 20px;
+  font-size: 15px;
+  margin: 0;
 }
 
 .month-day {
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .fa-cloud-sun,
@@ -239,6 +239,11 @@ p:first-letter {
   top: -22px;
 
   font-size: 40px;
+}
+
+.dayWeatherIcon {
+  height: 80px;
+  width: 80px;
 }
 
 button {
