@@ -1,4 +1,4 @@
-function updateCurrentHour(update) {
+function lastUpdated(update) {
   let currentHour = update.getHours();
   if (currentHour < 10) {
     currentHour = `0${currentHour}`;
@@ -58,8 +58,8 @@ function updateCurrentDate(update) {
       }
     }
   }
-  console.log(dateNumber);
 }
+
 function showDefault(city) {
   let apiKey = "2e441a46ac7fd97e3ca0c59e6e2a3fcc";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -95,9 +95,12 @@ function displayWeather(response) {
   displayMaxTemp.innerHTML = Math.round(response.data.main.temp_max);
   let displayMinTemp = document.querySelector("#min-temp");
   displayMinTemp.innerHTML = Math.round(response.data.main.temp_min);
-  console.log(response);
   let description = document.querySelector("#weather-description");
   description.innerHTML = response.data.weather[0].description;
+  console.log(response.data);
+
+  let hourUpdate = document.querySelector("#hour");
+  hourUpdate.innerHTML = lastUpdated(new Date(response.data.dt * 1000));
 }
 
 function retrievePosition(position) {
@@ -112,13 +115,9 @@ function retrievePosition(position) {
 function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(retrievePosition);
-  navigator.geolocation.getCurrentPosition(retrievePosition);
 }
 
 let now = new Date();
-
-let hourUpdate = document.querySelector("#hour");
-hourUpdate.innerHTML = updateCurrentHour(now);
 
 let MonthYearDayUpdate = document.querySelector("#month-year-day");
 MonthYearDayUpdate.innerHTML = updateCurrentMonthYearDay(now);
