@@ -85,22 +85,42 @@ function displayWeather(response) {
   displayCity.innerHTML = `${response.data.name},`;
   let displayTodayIn = document.querySelector("#today-in");
   displayTodayIn.innerHTML = `${response.data.name}:`;
+  let displayForecastCity = document.querySelector("#city-forecast");
+  displayForecastCity.innerHTML = `${response.data.name}:`;
   let displayFeelsLike = document.querySelector("#feels-like");
   displayFeelsLike.innerHTML = Math.round(response.data.main.feels_like);
   let displayHumidity = document.querySelector("#humidity");
   displayHumidity.innerHTML = response.data.main.humidity;
   let displayWindSpeed = document.querySelector("#wind");
-  displayWindSpeed.innerHTML = response.data.wind.speed;
+  displayWindSpeed.innerHTML = Math.round(response.data.wind.speed);
   let displayMaxTemp = document.querySelector("#max-temp");
   displayMaxTemp.innerHTML = Math.round(response.data.main.temp_max);
   let displayMinTemp = document.querySelector("#min-temp");
   displayMinTemp.innerHTML = Math.round(response.data.main.temp_min);
   let description = document.querySelector("#weather-description");
   description.innerHTML = response.data.weather[0].description;
-  console.log(response.data);
+
+  let weatherIcon = document.querySelector("#main-weather-icon");
+  weatherIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  weatherIcon.setAttribute("alt", response.data.weather[0].description);
 
   let hourUpdate = document.querySelector("#hour");
   hourUpdate.innerHTML = lastUpdated(new Date(response.data.dt * 1000));
+  console.log(response);
+
+  let apiKey = "2e441a46ac7fd97e3ca0c59e6e2a3fcc";
+  let lat = response.data.coord.lat;
+  let lon = response.data.coord.lon;
+  let apiUrlOneCall = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  console.log(lon);
+  axios.get(apiUrlOneCall).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response);
 }
 
 function retrievePosition(position) {

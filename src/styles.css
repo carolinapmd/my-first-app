@@ -105,6 +105,7 @@ body {
 
 .chosen-city {
   margin-top: 30px;
+  margin-bottom: 25px;
 }
 
 .chosen-city .location,
@@ -187,6 +188,11 @@ body {
   font-size: 80px;
   opacity: 0.1;
 }
+.weatherIcon {
+  position: relative;
+  top: -18px;
+  font-size: 80px;
+}
 
 .parameter,
 .parameter-value,
@@ -200,10 +206,16 @@ body {
 }
 
 .weatherDescription {
-  font-size: 22px;
+  text-align: center;
+  font-size: 18px;
+  position: relative;
+  top: -40px;
+  left: 0;
+
+  margin: 0;
 }
 
-.weatherDescription ::first-letter {
+p:first-letter {
   text-transform: capitalize;
 }
 
