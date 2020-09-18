@@ -15,7 +15,7 @@
 
 <body>
     <div class="container">
-        <div class="card" style="width: 100%">
+        <div class="card" style="width: 100%" style="background:url(/images/AboveClouds.webm)">
             <div class="card-body">
                 <div class="header">
                     <p class="date">
@@ -58,8 +58,8 @@
                         </div>
                         <div class="col-3 temperature">
                             <span class="temperature-value" id="temperature"></span>
-                            <span class="celsius">
-                                <a href="#" id="celsius-link" class="celsiusUnit">ºC</a>
+                            <span class="celsius celsiusUnit" id="celsius-link">
+                               ºC
                             </span>
                             <br />
                             <div class="maxMinTemp"> max: <strong><span id="max-temp"></span></strong><span
@@ -129,6 +129,7 @@
             </div>
         </div>
         <p class="openSource"><a href="https://github.com/carolinapmd/my-first-app" target="_blank">Open-source code</a>, by Carolina Domingues 👩🏻‍💻</p>
+    
     </div>
     <script src="src/script.js"></script>
 </body>

@@ -219,7 +219,7 @@ p:first-letter {
 }
 
 .five-day-weather .card {
-  background-image: linear-gradient(to top, #cfd9df7d 0%, #e2ebf07f 100%);
+  background-image: linear-gradient(to top, #cfd9df7d 0%, #ced7dc7f 100%);
   box-shadow: 4px 4px 4px rgba(148, 148, 148, 0.1);
   color: #11999e;
 }
