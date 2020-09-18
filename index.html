@@ -27,7 +27,7 @@
                             <span id="month-year-day">August 2020, Saturday</span>
                         </small>
                     </p>
-                    <p class="hour"><small>Last updated at 🕖</small><span id="hour">17:25</span>
+                    <p class="hour"><small>Last updated at 🕖</small><span id="hour"></span>
                     </p>
                 </div>
 
@@ -59,12 +59,12 @@
                         <div class="col-3 temperature">
                             <span class="temperature-value" id="temperature"></span>
                             <span class="celsius">
-                                <a href="#" id="ceslius-link">ºC</a>
+                                <a href="#" id="celsius-link" class="celsiusUnit">ºC</a>
                             </span>
                             <br />
                             <div class="maxMinTemp"> max: <strong><span id="max-temp"></span></strong><span
-                                    class="unit">ºC</span> | </span>
-                                min: <strong><span id="min-temp"></span></strong><span class="unit">ºC</span></div>
+                                    class="unit celsiusUnit" id="max-celsius-unit">ºC</span> | </span>
+                                min: <strong><span id="min-temp"></span></strong><span class="unit celsiusUnit">ºC</span></div>
 
                             <span class="change-units">
                                 <a href="#" id="fahrenheit-link">change to ºF</a>
@@ -90,7 +90,7 @@
                             <p class="parameter">Feels like:</p>
                             <br />
                             <span class="parameter-value" id="feels-like"></span>
-                            <span class="parameter-unit">ºC</span>
+                            <span class="parameter-unit celsiusUnit">ºC</span>
                             <br />
                             <i class="fas fa-temperature-low"></i>
                         </div>
