@@ -15,7 +15,7 @@
 
 <body>
     <div class="container">
-        <div class="card" style="width: 100%" style="background:url(/images/AboveClouds.webm)">
+        <div class="card" style="width: 100%" >
             <div class="card-body">
                 <div class="header">
                     <p class="date">
@@ -114,11 +114,17 @@
                 </div>
 
                 <hr />
-                <div class="five-day-weather">
+                <div class="forecastBox">
                     <p class="subtitle">
-                        5 day weather forecast in <strong><span id="city-forecast"></span></strong>
+                        Forecast in <strong><span id="forecast-city"></span></strong>
                     </p>
-                    <div class="card">
+                    <button type="button" class="btn btn-light  active" id="daily-forecast-button">
+                        5 day weather forecast 
+                    </button>
+                    <button type="button" class="btn btn-light  passive" id="hourly-forecast-button">
+                        Hourly forecast
+                    </button>
+                    <div class="forecastCard card">
                         <div class="card-body">
                             <div class="row" id="forecast">
                             

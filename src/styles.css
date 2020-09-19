@@ -24,7 +24,7 @@
 }
 
 body {
-  margin-top: 20px;
+  margin-top: 16px;
 }
 
 #fahrenheit-link {
@@ -36,17 +36,17 @@ body {
 }
 
 .container {
-  max-width: 780px;
-  min-width: 780px;
+  max-width: 624px;
+  min-width: 624px;
 }
 
 .card {
-  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(to top, #bfcfd8 0%, #e6eff5 100%);
+  box-shadow: 4px 4px 4px rgba(148, 148, 148, 0.1);
 }
 
 .header {
-  padding-bottom: 30px;
+  padding-bottom: 24px;
 }
 
 .date,
@@ -54,19 +54,19 @@ body {
   display: inline;
 }
 .header p strong {
-  font-size: 18px;
-  padding-left: 15px;
+  font-size: 14px;
+  padding-left: 12px;
 }
 .date {
-  padding: 0 15px 0 0;
+  padding: 0 12px 0 0;
   color: #11999e;
 }
 
 .hour {
-  font-size: 20px;
+  font-size: 16px;
   color: #757575;
   position: relative;
-  left: 270px;
+  left: 175px;
 }
 
 .search {
@@ -75,13 +75,13 @@ body {
 }
 .search-engine button {
   position: relative;
-  top: -50px;
-  left: 304px;
-  margin: 5px;
+  top: -46px;
+  left: 243px;
+  margin: 4px;
   color: #757575;
 }
 .search-engine {
-  max-width: 300px;
+  max-width: 240px;
   margin: 0 auto;
 }
 .search-engine label {
@@ -95,17 +95,17 @@ body {
 }
 .fa-search-location,
 .fa-compass {
-  font-size: larger;
+  font-size: 15px;
   color: #757575;
 }
 .form-control,
 .mb-2 {
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .chosen-city {
-  margin-top: 30px;
-  margin-bottom: 25px;
+  margin-top: -12px;
+  margin-bottom: 10px;
 }
 
 .chosen-city .location,
@@ -121,58 +121,69 @@ body {
   color: #11999e;
 }
 .city {
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 900;
 }
 .country {
-  font-size: 25px;
+  font-size: 20px;
 }
 .temperature {
   text-align: center;
 }
 .temperature-value {
   font-weight: 900;
-  font-size: 80px;
-  padding-left: 10px;
+  font-size: 64px;
+  padding-left: 8px;
 }
 .celsius {
   color: #11999e;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 20px;
   position: relative;
-  top: -37px;
+  top: -30px;
 }
 .change-units {
   color: #757575;
-  font-size: 14px;
+  font-size: 11px;
   position: relative;
-  top: -28px;
-  left: 82px;
+  top: -22px;
+  left: 66px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .maxMinTemp {
   color: #11999e;
   position: relative;
-  left: 128px;
-  top: -34px;
-  font-size: 20px;
+  left: 102px;
+  top: -27px;
+  font-size: 16px;
 }
 
 .unit {
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .weather-today,
-.five-day-weather {
-  padding: 0 40px;
+.forecastBox {
+  padding: 0 32px;
   color: #40514e;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+}
+
+.forecastBox button {
+  margin: 5px;
+  width: 231px;
+  height: 35px;
+  font-size: 15px;
+}
+
+.active button {
+  background-color: #f2f4f6;
 }
 
 .five-day-weather {
-  padding: 0 40px;
+  padding: 0 32px;
 }
 .subtitle {
   text-align: left;
@@ -183,14 +194,14 @@ body {
 .fa-wind {
   position: absolute;
   top: 50px;
-  left: 50px;
-  font-size: 80px;
+  left: 40px;
+  font-size: 64px;
   opacity: 0.1;
 }
 .weatherIcon {
   position: relative;
   top: -18px;
-  font-size: 80px;
+  font-size: 64px;
 }
 
 .parameter,
@@ -201,14 +212,14 @@ body {
 }
 
 .parameter-value {
-  font-size: 45px;
+  font-size: 36px;
 }
 
 .weatherDescription {
   text-align: center;
-  font-size: 18px;
+  font-size: 14px;
   position: relative;
-  top: -40px;
+  top: -32px;
   left: 0;
 
   margin: 0;
@@ -218,38 +229,38 @@ p:first-letter {
   text-transform: capitalize;
 }
 
-.five-day-weather .card {
-  background-image: linear-gradient(to top, #cfd9df7d 0%, #ced7dc7f 100%);
+.forecastCard {
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
   box-shadow: 4px 4px 4px rgba(148, 148, 148, 0.1);
   color: #11999e;
 }
 
 .temperature-day {
-  font-size: 15px;
+  font-size: 12px;
   margin: 0;
 }
 
 .month-day {
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .fa-cloud-sun,
 .fa-sun {
   position: relative;
-  top: -22px;
+  top: -18px;
 
-  font-size: 40px;
+  width: 100%;
 }
 
 .dayWeatherIcon {
-  height: 80px;
-  width: 80px;
+  width: 100%;
 }
 
 button {
   box-shadow: 4px 4px 4px rgba(148, 148, 148, 0.1);
 }
 
-p .openSource {
-  font-size: small;
+p.openSource {
+  font-size: 12px;
+  margin-top: 10px;
 }
