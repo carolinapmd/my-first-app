@@ -95,7 +95,7 @@ function displayWeather(response) {
   let displayTodayIn = document.querySelector("#today-in");
   displayTodayIn.innerHTML = `${response.data.name}:`;
 
-  let displayForecastCity = document.querySelector("#forecast-city");
+  let displayForecastCity = document.querySelector("#city-forecast");
   displayForecastCity.innerHTML = `${response.data.name}:`;
 
   let displayHumidity = document.querySelector("#humidity");

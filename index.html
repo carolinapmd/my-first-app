@@ -35,7 +35,7 @@
                     <div class="search-engine">
                         <form id="city-form">
                             <label for="enter-city">Check the weather in...</label>
-                            <input type="text" class="form-control mb-2" placeholder="Enter city here"
+                            <input type="text" class="form-control mb-2" placeholder="Enter city here" autocomplete="off"
                                 id="enter-city" />
                             <button type="submit" class="btn btn-light">
                                 <i class="fas fa-search-location"></i></button>
@@ -43,6 +43,8 @@
                                 <i class="far fa-compass"></i>
                             </button>
                         </form>
+                        <div class="coordinates"><i class="fas fa-map-marker-alt"></i> Decimal coordinates: <span id="latitude"></span><span>; </span><span
+                                    id="longitude"></span></div>
                     </div>
                 </div>
 
@@ -52,21 +54,20 @@
                             <hr />
                         </div>
                         <div class="col-3 location">
-                            <span class="city" id="city"></span>
-                            <br />
-                            <span class="country" id="country"></span>
+                            <div class="city" id="city"></div>
+                            <div class="country" id="country"></div>
                         </div>
                         <div class="col-3 temperature">
                             <span class="temperature-value" id="temperature"></span>
                             <span class="celsius celsiusUnit" id="celsius-link">
                                ºC
                             </span>
-                            <br />
+                            
                             <div class="maxMinTemp"> max: <strong><span id="max-temp"></span></strong><span
                                     class="unit celsiusUnit" id="max-celsius-unit">ºC</span> | </span>
                                 min: <strong><span id="min-temp"></span></strong><span class="unit celsiusUnit">ºC</span></div>
 
-                            <span class="change-units">
+                            <span class="changeCurrentUnits">
                                 <a href="#" id="fahrenheit-link">change to ºF</a>
                             </span>
                         </div>
@@ -75,6 +76,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="weather-today">
                     <p class="subtitle">
                         Today in <strong><span id="today-in"></span></strong>
@@ -116,14 +118,9 @@
                 <hr />
                 <div class="forecastBox">
                     <p class="subtitle">
-                        Forecast in <strong><span id="forecast-city"></span></strong>
+                        5 day Weather Forecast in <strong><span id="city-forecast"></span></strong>
                     </p>
-                    <button type="button" class="btn btn-light  active" id="daily-forecast-button">
-                        5 day weather forecast 
-                    </button>
-                    <button type="button" class="btn btn-light  passive" id="hourly-forecast-button">
-                        Hourly forecast
-                    </button>
+                    
                     <div class="forecastCard card">
                         <div class="card-body">
                             <div class="row" id="forecast">
@@ -131,6 +128,8 @@
                             </div>
                         </div>
                     </div>
+
+                
                 </div>
             </div>
         </div>

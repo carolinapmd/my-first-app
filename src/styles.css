@@ -1,33 +1,9 @@
-.first-color {
-  color: #e4f9f5;
-}
-.second-color {
-  color: #30e3ca;
-}
-.third-color {
-  color: #11999e;
-}
-.fourth-color {
-  color: #40514e;
-}
-.primary-text-color {
-  color: #212121;
-}
-.secondary-text-color {
-  color: #757575;
-}
-.divider-color {
-  color: #bdbdbd;
-}
-.icon-color {
-  color: #000000;
-}
-
 body {
   margin-top: 16px;
 }
 
-#fahrenheit-link {
+#fahrenheit-link,
+#forecast-units-link {
   color: #757575;
 }
 
@@ -41,7 +17,7 @@ body {
 }
 
 .card {
-  background-image: linear-gradient(to top, #bfcfd8 0%, #e6eff5 100%);
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
   box-shadow: 4px 4px 4px rgba(148, 148, 148, 0.1);
 }
 
@@ -72,6 +48,7 @@ body {
 .search {
   margin: 0 auto;
   display: block;
+  margin-bottom: 50px;
 }
 .search-engine button {
   position: relative;
@@ -89,6 +66,15 @@ body {
   margin-bottom: 0;
 }
 
+.coordinates {
+  font-size: 10px;
+  color: #757575;
+}
+
+form {
+  height: 60px;
+}
+
 .try {
   display: block;
   margin: 0 auto;
@@ -101,11 +87,6 @@ body {
 .form-control,
 .mb-2 {
   font-size: 12px;
-}
-
-.chosen-city {
-  margin-top: -12px;
-  margin-bottom: 10px;
 }
 
 .chosen-city .location,
@@ -123,6 +104,7 @@ body {
 .city {
   font-size: 32px;
   font-weight: 900;
+  margin-top: 8px;
 }
 .country {
   font-size: 20px;
@@ -132,7 +114,7 @@ body {
 }
 .temperature-value {
   font-weight: 900;
-  font-size: 64px;
+  font-size: 82px;
   padding-left: 8px;
 }
 .celsius {
@@ -140,22 +122,27 @@ body {
   font-weight: 500;
   font-size: 20px;
   position: relative;
-  top: -30px;
+  top: -40px;
 }
-.change-units {
+.changeCurrentUnits,
+.changeForecastUnits {
   color: #757575;
   font-size: 11px;
   position: relative;
-  top: -22px;
-  left: 66px;
+  top: -30px;
+  left: 70px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.changeForecastUnits {
+  left: 193px;
+  top: 0;
 }
 
 .maxMinTemp {
   color: #11999e;
   position: relative;
-  left: 102px;
-  top: -27px;
+  left: 108px;
+  top: -29px;
   font-size: 16px;
 }
 
@@ -168,12 +155,11 @@ body {
   padding: 0 32px;
   color: #40514e;
   text-align: center;
-  margin-bottom: 10px;
 }
 
 .forecastBox button {
-  margin: 5px;
-  width: 231px;
+  margin: 5px 0;
+  width: 241px;
   height: 35px;
   font-size: 15px;
 }
@@ -230,13 +216,15 @@ p:first-letter {
 }
 
 .forecastCard {
-  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  background-image: linear-gradient(to top, #cfd9df7d 0%, #e2ebf07f 100%);
+
   box-shadow: 4px 4px 4px rgba(148, 148, 148, 0.1);
   color: #11999e;
+  margin-bottom: 20px;
 }
 
 .temperature-day {
-  font-size: 12px;
+  font-size: 14px;
   margin: 0;
 }
 
