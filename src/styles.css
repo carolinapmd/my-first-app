@@ -2,13 +2,13 @@ body {
   margin-top: 16px;
 }
 
-#fahrenheit-link,
-#forecast-units-link {
-  color: #757575;
+hr {
+  border-color: #2d4c63;
 }
 
-#ceslius-link {
-  color: #11999e;
+#fahrenheit-link,
+#forecast-units-link {
+  color: #cfd8dc;
 }
 
 .container {
@@ -17,8 +17,8 @@ body {
 }
 
 .card {
-  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-  box-shadow: 4px 4px 4px rgba(148, 148, 148, 0.1);
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+  box-shadow: 8px 8px 8px rgba(148, 148, 148, 0.8);
 }
 
 .header {
@@ -35,12 +35,12 @@ body {
 }
 .date {
   padding: 0 12px 0 0;
-  color: #11999e;
+  color: #ffffff;
 }
 
 .hour {
   font-size: 16px;
-  color: #757575;
+  color: #cfd8dc;
   position: relative;
   left: 175px;
 }
@@ -52,23 +52,23 @@ body {
 }
 .search-engine button {
   position: relative;
-  top: -46px;
+  top: -43px;
   left: 243px;
   margin: 4px;
-  color: #757575;
+  line-height: 1;
 }
 .search-engine {
   max-width: 240px;
   margin: 0 auto;
 }
 .search-engine label {
-  color: #11999e;
+  color: #ffffff;
   margin-bottom: 0;
 }
 
 .coordinates {
   font-size: 10px;
-  color: #757575;
+  color: #cfd8dc;
 }
 
 form {
@@ -82,7 +82,7 @@ form {
 .fa-search-location,
 .fa-compass {
   font-size: 15px;
-  color: #757575;
+  color: #687378;
 }
 .form-control,
 .mb-2 {
@@ -99,7 +99,7 @@ form {
 .temperature {
   font-family: "Yantramanav", sans-serif;
   line-height: 1;
-  color: #11999e;
+  color: #ffffff;
 }
 .city {
   font-size: 32px;
@@ -118,7 +118,7 @@ form {
   padding-left: 8px;
 }
 .celsius {
-  color: #11999e;
+  color: #ffffff;
   font-weight: 500;
   font-size: 20px;
   position: relative;
@@ -126,7 +126,7 @@ form {
 }
 .changeCurrentUnits,
 .changeForecastUnits {
-  color: #757575;
+  color: #cfd8dc;
   font-size: 11px;
   position: relative;
   top: -30px;
@@ -139,7 +139,7 @@ form {
 }
 
 .maxMinTemp {
-  color: #11999e;
+  color: #ffffff;
   position: relative;
   left: 108px;
   top: -29px;
@@ -153,19 +153,8 @@ form {
 .weather-today,
 .forecastBox {
   padding: 0 32px;
-  color: #40514e;
+  color: #cfd8dc;
   text-align: center;
-}
-
-.forecastBox button {
-  margin: 5px 0;
-  width: 241px;
-  height: 35px;
-  font-size: 15px;
-}
-
-.active button {
-  background-color: #f2f4f6;
 }
 
 .five-day-weather {
@@ -216,10 +205,10 @@ p:first-letter {
 }
 
 .forecastCard {
-  background-image: linear-gradient(to top, #cfd9df7d 0%, #e2ebf07f 100%);
-
-  box-shadow: 4px 4px 4px rgba(148, 148, 148, 0.1);
-  color: #11999e;
+  background-image: linear-gradient(to top, #09203fad 0%, #537895 100%);
+  border: none;
+  box-shadow: 4px 4px 4px rgba(250, 250, 250, 0.1);
+  color: #ffffff;
   margin-bottom: 20px;
 }
 

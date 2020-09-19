@@ -107,6 +107,12 @@ function displayWeather(response) {
   let description = document.querySelector("#weather-description");
   description.innerHTML = response.data.weather[0].description;
 
+  let latitude = document.querySelector("#latitude");
+  latitude.innerHTML = response.data.coord.lat;
+
+  let longitude = document.querySelector("#longitude");
+  longitude.innerHTML = response.data.coord.lon;
+
   let weatherIcon = document.querySelector("#main-weather-icon");
   weatherIcon.setAttribute(
     "src",
